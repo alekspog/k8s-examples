@@ -89,12 +89,13 @@ kubectl get jobs --sort-by=.metadata.creationTimestamp -o jsonpath='{..items[-1:
 Job manifest has ttlSecondsAfterFinished setting which tell the k8s to delete job after the specified time (auto clean mechanism).
 
 ## Miinikube dashboard
-You can see the jobs and their statuses using minikube dashboard
+You can see the jobs and their statuses using minikube dashboard. Start minikube dashboard:
 ```bash
 minikube dashboard
 ```
 
-Choose the hello-ns namespace and open the jobs tab to see running jobs.
+It will open the minikube dashboard in your current browser.
+Choose the hello-ns namespace there and open the jobs tab to see running jobs.
 
 
 # Run tests using makefile
