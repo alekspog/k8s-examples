@@ -15,7 +15,7 @@ minikube start --feature-gates=TTLAfterFinished=true
 
 Switch to minio docker deamon:
 ```bash
-eval $$(minikube docker-env)
+eval $(minikube docker-env)
 ```
 
 Apply manifests for namespace, application and service:
