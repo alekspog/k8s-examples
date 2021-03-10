@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: hello-test-
+  namespace: hello-ns
+  labels: 
+    app: hello
+spec:
+  ttlSecondsAfterFinished: 1000
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello-test
+        image: kube-test:0.1
+        command: ["python3", "test_smoke.py"]
+        imagePullPolicy: Never
+      restartPolicy: Never
+  backoffLimit: 0
